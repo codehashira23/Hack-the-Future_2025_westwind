@@ -1,4 +1,4 @@
-# Hack the Future – 36-Hour Online Hackathon | Horizon 2025, IIITV-ICD
+# Hack the Future | Horizon 2025, IIITV-ICD
 
 Welcome to **Hack the Future**, the 36-hour online hackathon organized by Coding Club DCodr as part of **Horizon 2025**, the annual technical fest of **IIITV-ICD**. This is your chance to collaborate, innovate, and build creative solutions to real-world problems.
 
