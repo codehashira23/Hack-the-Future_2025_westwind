@@ -42,6 +42,12 @@ git push origin main
     - `README.md`: Instructions to run your project.
     - Source code and necessary files.
     - Documentation (if any).
+3. 4-5 Page PPT Presentation summarizing your solution to make it easier for judges to evaluate.
+   -  Slide 1: Title, team name, and problem statement.
+   -  Slide 2: Objective and solution overview.
+   -  Slide 3: Key features and technologies used.
+   -  Slide 4: solutions implemented.
+   -  Slide 5: Challenges faced.
 
 ⚠️ **Note:** Only PRs submitted before the hackathon deadline will be considered. Late submissions will not be accepted.
 
