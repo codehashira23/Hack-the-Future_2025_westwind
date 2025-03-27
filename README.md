@@ -56,8 +56,8 @@ git push origin main
 ---
 
 ## ⏱️ **Hackathon Timeline**
-- **Start:** [28/03/2025 11:59PM]
-- **End:** [30/03/2025 12PM]
+- **Start:** [28/03/2025 5PM]
+- **End:** [30/03/2025 5AM]
 - **Duration:** 36 hours (continuous online mode)
 
 ---
