@@ -1,37 +1,50 @@
-import React,{useState} from "react";
+import React from "react";
 function SignUpForm() {
-    const [state,setState]=useState({
-        name: "",
-        email: "",
-        password: "",
-    }
-    )
-    const handleChange = evt =>{
-        const value= evt.target.value;
-        setState({
-            ...state,
-            [evt.target.name]:value
-        })
-    };
-    const handleOnSubmit = evt => {
-        evt.preventDefault();
-        const {name,email,password} =state;
-        alert('You are sign up with name: ${name} email: ${email} and password: ${password}'
+  const [state, setState] = React.useState({
+    name: "",
+    email: "",
+    password: ""
+  });
+  const handleChange = evt => {
+    const value = evt.target.value;
+    setState({
+      ...state,
+      [evt.target.name]: value
+    });
+  };
+
+  const handleOnSubmit = evt => {
+    evt.preventDefault();
+
+    const { name, email, password } = state;
+    alert(
+      `You are sign up with name: ${name} email: ${email} and password: ${password}`
     );
 
     for (const key in state) {
-        setState({
-            ...state,
-            [key]: ""
-        });
+      setState({
+        ...state,
+        [key]: ""
+      });
     }
-};
+  };
 
-return (
+  return (
     <div className="form-container sign-up-container">
       <form onSubmit={handleOnSubmit}>
         <h1>Create Account</h1>
-        <span>email</span>
+        <div className="social-container">
+          <a href="/" className="social">
+            <i className="fab fa-facebook-f" />
+          </a>
+          <a href="/" className="social">
+            <i className="fab fa-google-plus-g" />
+          </a>
+          <a href="/" className="social">
+            <i className="fab fa-linkedin-in" />
+          </a>
+        </div>
+        <span>or use your email for registration</span>
         <input
           type="text"
           name="name"
@@ -57,6 +70,6 @@ return (
       </form>
     </div>
   );
-};
+}
 
 export default SignUpForm;
