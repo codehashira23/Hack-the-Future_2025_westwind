@@ -18,9 +18,11 @@ app.use(express.urlencoded({ extended: true }));
 
 // Route files
 const alumni = require('./routes/alumni');
+const student = require('./routes/student');
 
 // Mount routers
 app.use('/api/v1/alumni', alumni);
+app.use('/api/v1/students', student);
 
 // Basic route
 app.get('/api/health', (req, res) => {

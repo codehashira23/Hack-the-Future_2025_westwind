@@ -18,7 +18,6 @@ function SignUpForm() {
         const {name,email,password} =state;
         alert('You are sign up with name: ${name} email: ${email} and password: ${password}'
     );
-    }
 
     for (const key in state) {
         setState({
@@ -58,5 +57,6 @@ return (
       </form>
     </div>
   );
+};
 
 export default SignUpForm;
