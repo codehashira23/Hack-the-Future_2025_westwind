@@ -1,26 +1,22 @@
 import React from "react";
 import Navbar from "./components/navbar";
 import HeroSection from "./components/herosection";
-// import Mentorship from "../components/Mentorship";
+import Mentorship from "./components/mentorship";
 import HowItWorks from "./components/howitworks";
-// import SuccessStories from "../components/SuccessStories";
-// import Community from "../components/Community";
-// import Testimonials from "../components/Testimonials";
-// import FAQ from "../components/FAQ";
-// import Footer from "../components/Footer";
+import Community from "./components/community";
+import FAQ from "./components/faq";
+import Footer from "./components/footer";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
       <HeroSection />
-      {/* <Mentorship /> */}
+      <Mentorship />
       <HowItWorks />
-      {/* <SuccessStories />
       <Community />
-      <Testimonials />
       <FAQ />
-      <Footer /> */}
+      <Footer /> */
     </div>
   );
 };

@@ -1,0 +1,27 @@
+.community {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3);
+    border-radius: 12px;
+}
+
+.join-button {
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #ff6ec4, #7873f5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.join-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 110, 196, 0.5);
+}
