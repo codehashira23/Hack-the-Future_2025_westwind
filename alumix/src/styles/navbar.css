@@ -3,12 +3,16 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    box-shadow: 0px 4px 12px rgba(106, 17, 203, 0.3);
+    font-family: 'Poppins', sans-serif;
 }
 
 .logo {
-    flex: 1; /* Pushes content to the left */
+    flex: 1;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
 }
 
 .nav-center {
@@ -30,12 +34,17 @@
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d6b3ff;
 }
 
 .nav-buttons {
     flex: 1;
     display: flex;
-    justify-content: flex-end; /* Pushes buttons to the right */
+    justify-content: flex-end;
 }
