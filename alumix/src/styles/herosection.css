@@ -1,5 +1,5 @@
 .hero {
-    margin-top: 100px; 
+    /* margin-top: 150px;  */
     text-align: center;
     padding: 120px 20px;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
@@ -11,12 +11,20 @@
     justify-content: center;
     box-shadow: 0px 10px 30px rgba(106, 17, 203, 0.4);
     border-radius: 12px;
-    margin: 40px auto;
+    margin : 120px ;
     max-width: 90%;
+}
+
+h1{
+    font-size:50px;
+}
+p{
+    font-size:20px; 
 }
 
 .highlight {
     color: #d6b3ff;
+    font-size:40px; 
     font-weight: bold;
     text-shadow: 2px 2px 10px rgba(214, 179, 255, 0.8);
 }
