@@ -6,6 +6,7 @@ import SignUp from "./login/Signup";
 // import Profile from "./Profile Dashboard/dashboard.jsx";
 // import Login from "./pages/Login";
 import StudentDashboard from "./divyansh-student/dashboard.jsx";
+import AlumniDashboard from "./divyansh-alumni/dashboard.jsx";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/login" element={<SignInForm />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/student/dashboard" element={<StudentDashboard />} />
+        <Route path="/alumni/dashboard" element={<AlumniDashboard />} />
 
       </Routes>
     </Router>
