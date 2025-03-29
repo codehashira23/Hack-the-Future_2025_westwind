@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../src/Home";
 import SignInForm from "./login/login.js";
 import SignUp from "./login/Signup";
+// import Profile from "./Profile Dashboard/dashboard.jsx";
 // import Login from "./pages/Login";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         {/* <Route path="/login/:role" element={<Login />} /> */}
         <Route path="/login" element={<SignInForm />} />
         <Route path="/signup" element={<SignUp />} />
-
+        {/* <Route path="/profile" element={<Profile />} /> */}
       </Routes>
     </Router>
   );
