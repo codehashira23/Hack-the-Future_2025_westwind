@@ -3,11 +3,13 @@
   display: flex;
   min-height: 100vh;
   background-color: #f0f8ff; /* Light blue background */
+  position: relative;
 }
 
 #dashboard-flex {
   display: flex;
   width: 100%;
+  position: relative;
 }
 
 /* Main dashboard styling */
@@ -20,6 +22,8 @@
   align-items: center;
   justify-content: flex-start;
   padding: 20px;
+  overflow-y: auto; /* Enable scrolling for main content */
+  transition: margin-left 0.4s ease; /* Smooth transition for sidebar animation */
 }
 
 #dashboard-main h1 {

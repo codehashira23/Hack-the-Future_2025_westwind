@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { menuItems } from "./data";
 import NavItem from "./NavItem";
 import { Tooltip } from "react-tooltip";
 import "./sidebar.css";
 
-const Sidebar = ({ setActiveSection }) => {
+const Sidebar = ({ setActiveSection, setSidebarWidth }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    // Update parent component with current sidebar width
+    setSidebarWidth(isOpen ? 240 : 60);
+  }, [isOpen, setSidebarWidth]);
 
   return (
     <div id="sidebar-container">
