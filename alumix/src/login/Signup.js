@@ -35,7 +35,7 @@ function SignUp() {
     <div className="form-container sign-up-container signup">
     <form onSubmit={handleOnSubmit}>
       <h1>Create Account</h1>
-      <span>or use your email for registration</span>
+      <span>use your institute email for registration and verification</span>
       <input
         type="text"
         name="name"
