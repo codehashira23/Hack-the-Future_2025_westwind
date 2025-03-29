@@ -1,63 +1,85 @@
-import React from "react";
-import "./login.css"
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import "./login.css";
 
-function SignUp() {
-  const [state, setState] = React.useState({
-    name: "",
+function SignInForm() {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
     email: "",
-    password: ""
+    password: "",
   });
-  const handleChange = evt => {
-    const value = evt.target.value;
-    setState({
-      ...state,
-      [evt.target.name]: value
-    });
+  const [error, setError] = useState("");
+
+  const handleChange = (evt) => {
+    const { name, value } = evt.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
   };
 
-  const handleOnSubmit = evt => {
+  const handleSubmit = async (evt) => {
     evt.preventDefault();
+    setError("");
 
-    const { name, email, password } = state;
-    alert(
-     `You are sign up with name: ${name} email: ${email} and password: ${password}`
-    );
-
-    for (const key in state) {
-      setState({
-        ...state,
-        [key]: ""
+    try {
+      const response = await fetch('http://localhost:3001/api/v1/students/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Login failed');
+      }
+
+      // Store the token in localStorage
+      localStorage.setItem('token', data.token);
+      
+      // Redirect to dashboard or home page
+      navigate('/dashboard');
+    } catch (err) {
+      setError(err.message || 'An error occurred during login');
     }
   };
 
   return (
-    <div className="form-container sign-in-container">
-      <form onSubmit={handleOnSubmit}>
-        <h1>Sign in</h1>
-        <span></span>
-        <input
-          type="email"
-          placeholder="Email"
-          name="email"
-          value={state.email}
-          onChange={handleChange}
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={state.password}
-          onChange={handleChange}
-        />
-        <a href="www.google.com">Forgot your password?</a>
-        <br />
-        <br /><br /><br />
-        <button>Sign In</button>
-      </form>
+    <div className="login-container">
+      <div className="form-container sign-in-container">
+        <form onSubmit={handleSubmit}>
+          <h1>Sign in</h1>
+          {error && <div className="error-message">{error}</div>}
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+          <button type="submit" className="sign-in-button">Sign In</button>
+          <div className="form-footer">
+            <p>Don't have an account?</p>
+            <Link to="/signup" className="sign-up-link">
+              <button type="button" className="ghost-button">Sign Up</button>
+            </Link>
+          </div>
+        </form>
+      </div>
     </div>
-    
   );
 }
 
-export default SignUp;
+export default SignInForm;

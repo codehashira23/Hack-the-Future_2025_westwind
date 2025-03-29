@@ -1,0 +1,43 @@
+/* sidebar.css */
+
+#sidebar-container {
+    display: flex;
+  }
+  
+  #sidebar {
+    background-color: #1a202c; /* Tailwind's gray-900 */
+    height: 100vh;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow: hidden;
+  }
+  
+  #sidebar-toggle {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
