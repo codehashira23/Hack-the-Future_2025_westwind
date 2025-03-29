@@ -4,9 +4,9 @@ import "../styles/navbar.css";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="logo">ALUMIX</div>
+      <div className="logo">ALUMiNiX</div>
       <ul className="nav-links">
-        <li><a href="#">Home</a></li>
+        <li><a href="#">Explore Mentors</a></li>
         <li><a href="#">Mentors</a></li>
         <li><a href="#">Success Stories</a></li>
       </ul>
