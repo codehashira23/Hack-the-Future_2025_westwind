@@ -1,7 +1,9 @@
 import React from "react";
-import './signInUp.css';
-function SignInForm() {
+import "./login.css"
+
+function SignUp() {
   const [state, setState] = React.useState({
+    name: "",
     email: "",
     password: ""
   });
@@ -16,8 +18,10 @@ function SignInForm() {
   const handleOnSubmit = evt => {
     evt.preventDefault();
 
-    const { email, password } = state;
-    alert(`You are login with email: ${email} and password: ${password}`);
+    const { name, email, password } = state;
+    alert(
+     `You are sign up with name: ${name} email: ${email} and password: ${password}`
+    );
 
     for (const key in state) {
       setState({
@@ -31,7 +35,7 @@ function SignInForm() {
     <div className="form-container sign-in-container">
       <form onSubmit={handleOnSubmit}>
         <h1>Sign in</h1>
-        <span>or use your account</span>
+        <span></span>
         <input
           type="email"
           placeholder="Email"
@@ -46,11 +50,14 @@ function SignInForm() {
           value={state.password}
           onChange={handleChange}
         />
-        <div>Forgot your password?</div>
+        <a href="www.google.com">Forgot your password?</a>
+        <br />
+        <br /><br /><br />
         <button>Sign In</button>
       </form>
     </div>
+    
   );
 }
 
-export default SignInForm;
+export default SignUp;

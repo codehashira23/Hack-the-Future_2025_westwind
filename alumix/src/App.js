@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../src/Home";
-import SignUpForm from "./login/signup.jsx";
-import SignInForm from "./login/login";
+import SignInForm from "./login/login.js";
+import SignUp from "./login/Signup";
 // import Login from "./pages/Login";
 
 function App() {
@@ -11,8 +11,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/login/:role" element={<Login />} /> */}
-        <Route path="/sign" element={<SignUpForm />} />
         <Route path="/login" element={<SignInForm />} />
+        <Route path="/test" element={<SignUp />} />
+
       </Routes>
     </Router>
   );
